@@ -68,3 +68,14 @@ unsigned int ClapTrap::getHitPoints()
 {
     return this->HitPoints;
 }
+
+ClapTrap& ClapTrap::operator=( const ClapTrap &rhs ) {
+    std::cout << "Copy assignment operator called" << std::endl;
+    if (this != &rhs)
+    {
+        this->AttackDamage = rhs.AttackDamage;
+        this->EnergyPoints = rhs.EnergyPoints;
+        this->HitPoints = rhs.HitPoints;
+    }
+    return *this;
+}

@@ -1,10 +1,11 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
     ClapTrap John("John");
-    ClapTrap Steve("Steve");
+    FragTrap Steve("Steve");
     ScavTrap Bob("Bob");
 
     Steve.attack("John");
@@ -14,10 +15,9 @@ int main()
     Steve.takeDamage(John.getAttackDamage());
     Steve.beRepaired(John.getAttackDamage());
     Bob.guardGate();
-    Bob.attack("John");
-    John.takeDamage(Bob.getAttackDamage());
-    John.beRepaired(Bob.getAttackDamage());
     Bob.attack("Steve");
     Steve.takeDamage(Bob.getAttackDamage());
+    Steve.beRepaired(Bob.getAttackDamage());
     std::cout << "Bob has " << Bob.getEnergyPoints() << " Energy Points left." << std::endl;
+    Steve.highFiveGuys();
 }

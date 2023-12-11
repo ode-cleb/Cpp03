@@ -1,4 +1,4 @@
-NAME = ScavTrap
+NAME = FragTrap
 
 # COMMANDS
 CC = c++
@@ -6,7 +6,7 @@ MKDIR = mkdir -p
 RM = rm -rf
 
 # SOURCES
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 # OBJECTS
 O_DIR = objs
