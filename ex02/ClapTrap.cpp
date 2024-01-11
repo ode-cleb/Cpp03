@@ -1,13 +1,18 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : name(name), HitPoints(10), EnergyPoints(10), AttackDamage(0)
+ClapTrap::ClapTrap()
 {
     std::cout << "Constructor ClapTrap called" << std::endl;
 }
 
+ClapTrap::ClapTrap(std::string name) : name(name), HitPoints(10), EnergyPoints(10), AttackDamage(0)
+{
+    std::cout << "Constructor ClapTrap " << this->name << " called" << std::endl;
+}
+
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor ClapTrap called" << std::endl;
+    std::cout << "Destructor ClapTrap " << this->name << " called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other)
